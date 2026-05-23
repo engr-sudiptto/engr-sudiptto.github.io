@@ -71,40 +71,50 @@ const Navbar = () => {
             <p className="text-xs font-bold  text-[#d11110]">Close</p>
           </div>
           <Link
-            className="text-white font-bold xl:text-[#d11110] xl:font-semibold"
+            className="text-white font-bold xl:text-[#d11110] xl:font-semibold group relative"
             to="/"
           >
             Home
+            {/* left to right hover animation */}
+            <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-[#d11110] transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
           </Link>
           <Link
-            className="text-white font-bold xl:text-[#d11110] xl:font-semibold"
+            className="text-white font-bold xl:text-[#d11110] xl:font-semibold group relative"
             to="/about"
           >
             About
+            {/* left to right hover animation */}
+            <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-[#d11110] transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
           </Link>
           <Link
-            className="text-white font-bold xl:text-[#d11110] xl:font-semibold"
+            className="text-white font-bold xl:text-[#d11110] xl:font-semibold group relative"
             to="skills/"
           >
             Skills
+            {/* left to right hover animation */}
+            <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-[#d11110] transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
           </Link>
           <Link
-            className="text-white font-bold xl:text-[#d11110] xl:font-semibold"
+            className="text-white font-bold xl:text-[#d11110] xl:font-semibold group relative"
             to="/projects"
           >
             Projects
+            {/* left to right hover animation */}
+            <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-[#d11110] transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
           </Link>
           <Link
-            className="text-white font-bold xl:text-[#d11110] xl:font-semibold"
+            className="text-white font-bold xl:text-[#d11110] xl:font-semibold group relative"
             to="/contact"
           >
             Contact
+            {/* left to right hover animation */}
+            <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-[#d11110] transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
           </Link>
           <Link
             to="/details"
-            className="w-30 h-10 border border-white rounded-sm flex items-center justify-center gap-1 xl:border-[#d11110] "
+            className="w-30 h-10 border border-white rounded-sm flex items-center justify-center gap-1 xl:border-[#d11110] xl:hover:bg-[#d11110] group"
           >
-            <p className="text-white font-bold xl:text-[#d11110] xl:font-semibold">
+            <p className="text-white font-bold xl:text-[#d11110] xl:font-semibold xl:group-hover:text-white">
               Details
             </p>
             <svg
@@ -113,7 +123,7 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="size-6 text-white xl:text-[#d11110]"
+              className="size-6 text-white xl:text-[#d11110] xl:group-hover:text-white"
             >
               <path
                 strokeLinecap="round"
