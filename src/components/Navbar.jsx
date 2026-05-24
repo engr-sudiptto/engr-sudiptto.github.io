@@ -5,7 +5,7 @@ import logo from '../assets/mainLogo.png'
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   return (
-    <div className="w-full max-w-300 m-auto px-3 py-2 relative flex items-center justify-between">
+    <div className="w-full max-w-300 m-auto px-3 py-2 fixed top-0 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between">
       {/* ========== My Logo ========== */}
       <Link className="flex gap-1 items-center sm:gap-1.5" to="/">
         <img
@@ -31,7 +31,7 @@ const Navbar = () => {
             viewBox="0 0 24 24"
             strokeWidth="2"
             stroke="currentColor"
-            class="size-8 text-[#d11110] cursor-pointer xl:hidden"
+            class="size-8 text-white cursor-pointer xl:hidden"
           >
             <path
               strokeLinecap="round"
@@ -43,7 +43,7 @@ const Navbar = () => {
 
         <div
           onClick={() => setIsNavbarOpen(false)}
-          className={`${isNavbarOpen ? 'visible' : 'hidden'} fixed inset-0 w-full h-screen bg-black/20 backdrop-blur-xs`}
+          className={`${isNavbarOpen ? 'visible' : 'hidden'} fixed inset-0 w-full h-screen bg-black/20 backdrop-blur-xs transition-all duration-700`}
         ></div>
 
         {/* ======== mobile menu and desktop nemu ========  */}
@@ -87,34 +87,34 @@ const Navbar = () => {
             <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-[#d11110] transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
           </Link>
           <Link
-            className="text-white font-bold xl:text-[#d11110] xl:font-semibold group relative"
+            className="text-white font-bold xl:text-white xl:font-semibold group relative"
             to="skills/"
           >
             Skills
             {/* left to right hover animation */}
-            <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-[#d11110] transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
+            <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-white transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
           </Link>
           <Link
-            className="text-white font-bold xl:text-[#d11110] xl:font-semibold group relative"
+            className="text-white font-bold xl:text-white xl:font-semibold group relative"
             to="/projects"
           >
             Projects
             {/* left to right hover animation */}
-            <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-[#d11110] transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
+            <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-white transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
           </Link>
           <Link
-            className="text-white font-bold xl:text-[#d11110] xl:font-semibold group relative"
+            className="text-white font-bold xl:text-white xl:font-semibold group relative"
             to="/contact"
           >
             Contact
             {/* left to right hover animation */}
-            <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-[#d11110] transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
+            <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-white transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
           </Link>
           <Link
             to="/details"
-            className="w-30 h-10 border border-white rounded-sm flex items-center justify-center gap-1 xl:border-[#d11110] xl:hover:bg-[#d11110] group"
+            className="w-30 h-10 border border-white rounded-sm flex items-center justify-center gap-1 xl:hover:bg-white group"
           >
-            <p className="text-white font-bold xl:text-[#d11110] xl:font-semibold xl:group-hover:text-white">
+            <p className="text-white font-bold xl:font-semibold xl:group-hover:text-[#d11110]">
               Details
             </p>
             <svg
@@ -123,7 +123,7 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="size-6 text-white xl:text-[#d11110] xl:group-hover:text-white"
+              className="size-6 text-white xl:group-hover:text-[#d11110]"
             >
               <path
                 strokeLinecap="round"
