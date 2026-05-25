@@ -5,7 +5,7 @@ import logo from '../assets/mainLogo.png'
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   return (
-    <div className="w-full max-w-300 m-auto px-3 py-2 fixed top-0 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between">
+    <div className="w-full max-w-300 m-auto px-3 py-2 fixed top-0 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between h-auto">
       {/* ========== My Logo ========== */}
       <Link className="flex gap-1 items-center sm:gap-1.5" to="/">
         <img
@@ -31,7 +31,7 @@ const Navbar = () => {
             viewBox="0 0 24 24"
             strokeWidth="2"
             stroke="currentColor"
-            class="size-8 text-white cursor-pointer xl:hidden"
+            class="size-8 text-white cursor-pointer lg:hidden"
           >
             <path
               strokeLinecap="round"
@@ -48,11 +48,11 @@ const Navbar = () => {
 
         {/* ======== mobile menu and desktop nemu ========  */}
         <ul
-          className={`w-60 h-screen flex flex-col gap-10 bg-linear-to-br from-[#d11110] to-[#8b0000] fixed top-0 ${isNavbarOpen ? 'right-0 opacity-100' : '-right-60 sm:-right-75 lg:-right-85 opacity-0'} xl:opacity-100 p-10 sm:w-75 lg:w-85 xl:bg-none xl:static xl:h-11 xl:flex-row xl:items-center xl:w-auto xl:right-0 transition-all duration-700`}
+          className={`w-60 h-screen flex flex-col gap-10 lg:gap-8.5 xl:gap-12 bg-linear-to-br from-[#d11110] to-[#8b0000] fixed top-0 ${isNavbarOpen ? 'right-0 opacity-100' : '-right-60 sm:-right-75 md:-right-85 opacity-0'} lg:opacity-100 p-10 sm:w-75 md:w-85 lg:bg-none lg:static lg:h-11 lg:flex-row lg:items-center lg:w-auto lg:right-0 transition-all duration-700 `}
         >
           <div
             onClick={() => setIsNavbarOpen(false)}
-            className="w-17 h-6 flex bg-white rounded-sm items-center justify-center gap-0.5 cursor-pointer xl:hidden"
+            className="w-17 h-6 flex bg-white rounded-sm items-center justify-center gap-0.5 cursor-pointer lg:hidden"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +71,7 @@ const Navbar = () => {
             <p className="text-xs font-bold  text-[#d11110]">Close</p>
           </div>
           <Link
-            className="text-white font-bold xl:text-[#d11110] xl:font-semibold group relative"
+            className="text-white font-bold lg:text-[#d11110] xl:font-bold group relative lg:text-sm"
             to="/"
           >
             Home
@@ -79,7 +79,7 @@ const Navbar = () => {
             <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-[#d11110] transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
           </Link>
           <Link
-            className="text-white font-bold xl:text-[#d11110] xl:font-semibold group relative"
+            className="text-white font-bold lg:text-[#d11110] xl:font-bold group relative lg:text-sm"
             to="/about"
           >
             About
@@ -87,7 +87,7 @@ const Navbar = () => {
             <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-[#d11110] transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
           </Link>
           <Link
-            className="text-white font-bold xl:text-white xl:font-semibold group relative"
+            className="text-white font-bold xl:text-white xl:font-bold group lg:text-sm relative"
             to="skills/"
           >
             Skills
@@ -95,7 +95,7 @@ const Navbar = () => {
             <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-white transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
           </Link>
           <Link
-            className="text-white font-bold xl:text-white xl:font-semibold group relative"
+            className="text-white font-bold xl:text-white xl:font-bold group lg:text-sm relative"
             to="/projects"
           >
             Projects
@@ -103,7 +103,7 @@ const Navbar = () => {
             <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-white transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
           </Link>
           <Link
-            className="text-white font-bold xl:text-white xl:font-semibold group relative"
+            className="text-white font-bold xl:text-white lg:text-sm xl:font-bold group relative"
             to="/contact"
           >
             Contact
@@ -112,9 +112,9 @@ const Navbar = () => {
           </Link>
           <Link
             to="/details"
-            className="w-30 h-10 border border-white rounded-sm flex items-center justify-center gap-1 xl:hover:bg-white group"
+            className="w-30 h-10 lg:w-25 lg:h-8 border border-white rounded-sm flex items-center justify-center gap-1 xl:hover:bg-white group lg:text-sm"
           >
-            <p className="text-white font-bold xl:font-semibold xl:group-hover:text-[#d11110]">
+            <p className="text-white font-bold xl:font-bold xl:group-hover:text-[#d11110]">
               Details
             </p>
             <svg
