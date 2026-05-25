@@ -11,45 +11,69 @@ const Home = () => {
 
       {/* ========= home page content is here =======  */}
       <div className="w-full max-w-300 m-auto">
-        <div className="w-full h-auto relative mt-20">
+        <div className="w-full relative mt-20 h-full">
           <img
-            className="w-full h-180 object-cover absolute inset-0 z-1 sm:h-130 sm:w-full sm:m-auto lg:h-170 xl:h-190"
+            className="w-full h-110 sm:h-130 lg:h-150 absolute bottom-0 object-cover z-1"
             src={heroSectionBG}
             alt="hero section background"
           />
           <img
-            className="w-full h-180 object-cover relative z-3 sm:h-130 sm:w-90 sm:m-auto lg:h-170 lg:w-115 xl:h-190 xl:w-130"
+            className="w-[65%] sm:w-[50%] h-full m-auto bottom-0 object-cover z-3 relative md:w-[45%] lg:w-[40%]"
             src={heroImage}
             alt="Hero image"
           />
 
-          {/* ---------- left svg ------  */}
+          {/* =========== left svg ============  */}
+          {/* --- mobile left ----  */}
           <svg
             viewBox="0 0 500 300"
             preserveAspectRatio="none"
-            className="w-[95%] h-25 absolute bottom-0 left-0 z-4 sm:z-2 sm:w-[40%] sm:h-45 sm:bottom-60 lg:w-[39%] lg:h-60 lg:bottom-80 xl:h-65"
+            className="w-[40%] h-[34%] absolute bottom-40 left-0 z-2 widermobile:bottom-45 maxmobile:bottom-50 promobile:bottom-54 ultrapromobile:bottom-60 sm:hidden"
           >
-            <polygon points="0,0 500,0 420,300 0,300" fill="#e31e24" />
+            <polygon points="0,0 460,0 350,300 0,300" fill="#e31e24" />
+          </svg>
+          {/* --- mini tab left ----  */}
+          <svg
+            viewBox="0 0 500 300"
+            preserveAspectRatio="none"
+            className="hidden sm:block absolute left-0 z-2 sm:bottom-50 sm:w-[41%] sm:h-[36%] md:hidden"
+          >
+            <polygon points="0,0 500,0 360,300 0,300" fill="#e31e24" />
+          </svg>
+          {/* --- bog tab left ----  */}
+          <svg
+            viewBox="0 0 500 300"
+            preserveAspectRatio="none"
+            className="hidden md:block absolute left-0 z-2 md:w-[41%] md:h-[37%] md:bottom-53 lg:hidden"
+          >
+            <polygon points="0,0 500,0 370,300 0,300" fill="#e31e24" />
+          </svg>
+          {/* --- lg break ponit right ----  */}
+          <svg
+            viewBox="0 0 500 300"
+            preserveAspectRatio="none"
+            className="hidden lg:block absolute left-0 z-2 lg:w-[42%] lg:h-[43%] lg:bottom-55 xl:bottom-60"
+          >
+            <polygon points="0,0 500,0 390,300 0,300" fill="#e31e24" />
           </svg>
 
-          {/* ---------- right svg ------- */}
+          {/* ============ right svg =========== */}
           {/* --- mobile right ----  */}
           <svg
             viewBox="0 0 500 300"
             preserveAspectRatio="none"
-            className="w-[80%] h-115 absolute -top-20 z-2 right-0 sm:hidden"
+            className="w-[55%] h-[95%] absolute -top-20 z-2 right-0 sm:w-[57%] sm:h-[85%] md:w-[58%] lg:hidden"
           >
-            <polygon points="180,0 500,0 500,300 0,300" fill="#d11110" />
+            <polygon points="220,0 500,0 500,300 0,300" fill="#d11110" />
           </svg>
-          {/* --- mini tab right ----  */}
+          {/* --- lg break ponit right ----  */}
           <svg
             viewBox="0 0 500 300"
             preserveAspectRatio="none"
-            className="hidden sm:block absolute -top-20 z-2 right-0 sm:visible sm:w-[53%] sm:h-110 lg:w-[53%] lg:h-140 xl:h-160"
+            className="hidden lg:block absolute -top-20 z-2 right-0 lg:w-[55%] lg:h-[85%]"
           >
-            <polygon points="160,0 500,0 500,300 0,300" fill="#d11110" />
+            <polygon points="170,0 500,0 500,300 0,300" fill="#d11110" />
           </svg>
-
         </div>
       </div>
     </div>
