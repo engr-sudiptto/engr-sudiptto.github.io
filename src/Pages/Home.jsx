@@ -12,6 +12,8 @@ const Home = () => {
       {/* ========= home page content is here =======  */}
       <div className="w-full max-w-300 m-auto">
         <div className="w-full relative mt-20 h-full">
+          {/* ------ white fog effect -------- */}
+          <div className="w-full h-[15%] bg-linear-to-t from-white via-slate-50/30 to-transparent absolute left-0 bottom-0 z-5"></div>
           <img
             className="w-full h-110 sm:h-130 lg:h-150 absolute bottom-0 object-cover z-1"
             src={heroSectionBG}
