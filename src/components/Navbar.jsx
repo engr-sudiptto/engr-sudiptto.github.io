@@ -31,7 +31,7 @@ const Navbar = () => {
             viewBox="0 0 24 24"
             strokeWidth="2"
             stroke="currentColor"
-            class="size-8 text-white cursor-pointer lg:hidden"
+            className="size-8 text-white cursor-pointer lg:hidden"
           >
             <path
               strokeLinecap="round"

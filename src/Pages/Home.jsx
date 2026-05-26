@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import heroImage from '../assets/mainHero.png';
 import heroSectionBG from '../assets/heroBg.jpg';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -77,6 +78,84 @@ const Home = () => {
             <polygon points="170,0 500,0 500,300 0,300" fill="#d11110" />
           </svg>
         </div>
+      </div>
+
+      {/* =============== home section text =============  */}
+      <div className="pt-10">
+        <p className="text-center text-sm text-[#d11110] font-bold tracking-[4px]">
+          I BUILD MODERN
+        </p>
+        <h2 className="text-center text-4xl tracking-wide text-gray-800 font-bold mt-2">
+          Web Experiences
+        </h2>
+        <h3 className="text-center text-4xl tracking-wide mt-1 font-bold text-[#d11110]">
+          That Matter.
+        </h3>
+        <p className="text-center text-base w-70 m-auto mt-3 text-gray-500">
+          Transforming ideas into fast, secure and scalable web applications.
+        </p>
+        {/* -------- button ---------  */}
+        <Link className="flex items-center justify-center gap-2 bg-[#d11110] w-65 h-12 text-center content-center m-auto mt-8 mb-10 text-white font-semibold rounded-lg group hover:bg-[#c21111]">
+          <p>View Projects</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="size-6 mt-0.5 group-hover:translate-x-2 duration-300"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+            />
+          </svg>
+        </Link>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          className="w-8 h-8 m-auto block animate-bounce"
+        >
+          {/* --- Main Outer Body --- */}
+          <rect
+            x="88"
+            y="16"
+            width="336"
+            height="480"
+            rx="168"
+            fill="none"
+            stroke="#d1111090"
+            strokeWidth="25"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          {/* --- Center Line --- */}
+          <line
+            x1="256"
+            y1="16"
+            x2="256"
+            y2="300"
+            stroke="#d1111090"
+            strokeWidth="20"
+            strokeLinecap="round"
+          />
+          {/* --- Scroll Wheel --- */}
+          <rect
+            x="216"
+            y="96"
+            width="80"
+            height="130"
+            rx="40"
+            fill="#ffffff"
+            stroke="#d1111090"
+            strokeWidth="20"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+        <p className="text-center text-[10px] font-bold tracking-[5px] mt-2 text-gray-400">SCROLL DOWN</p>
       </div>
     </div>
   );
