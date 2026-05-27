@@ -77,13 +77,26 @@ const Home = () => {
 
           {/* ============ right svg =========== */}
           {/* --- mobile right ----  */}
-          <svg
-            viewBox="0 0 500 300"
-            preserveAspectRatio="none"
-            className="w-[55%] h-[95%] absolute -top-20 z-2 right-0 sm:w-[57%] sm:h-[85%] md:w-[58%] lg:hidden"
-          >
-            <polygon points="220,0 500,0 500,300 0,300" fill="#d11110" />
-          </svg>
+          <div className="w-[55%] h-[95%] absolute z-2 top-0 right-0">
+            <svg
+              viewBox="0 0 500 300"
+              preserveAspectRatio="none"
+              className="w-full h-full absolute -top-20 z-2 right-0 sm:w-[57%] sm:h-[85%] md:w-[58%] lg:hidden font-mono"
+            >
+              <polygon points="220,0 500,0 500,300 0,300" fill="#d11110" />
+            </svg>
+            <div className=" absolute -top-8 right-0 z-3 h-auto text-center pr-1 pb-10 font-serif">
+              <p className="text-2xl text-white">I Have the</p>
+              <p className="text-3xl text-amber-300 font-bold transform scale-y-170 origin-top -mt-3">
+                SKILLS
+              </p>
+              <p className="text-xl text-white mt-4">to Build your</p>
+              <p className="text-2xl text-white ">Vision</p>
+              <p className="text-3xl font-bold text-white transform scale-y-170 origin-top -mt-3">
+                ONLINE
+              </p>
+            </div>
+          </div>
           {/* --- lg break ponit right ----  */}
           <svg
             viewBox="0 0 500 300"
