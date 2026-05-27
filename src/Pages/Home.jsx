@@ -13,6 +13,21 @@ const Home = () => {
       {/* ========= home page content is here =======  */}
       <div className="w-full max-w-300 m-auto">
         <div className="w-full relative mt-20 h-full">
+          {/* ----------- main hero text -------------  */}
+          <div className="w-full absolute left-0 bottom-6 z-4 sm:bottom-10">
+            <h2 className="text-center text-amber-300 font-black tracking-widest text-[40px] italic sm:text-6xl xl:text-7xl">
+              MERN STACK
+            </h2>
+            <h3 className="text-center text-slate-50 text-xl font-bold -mt-2 tracking-wide sm:text-3xl sm:mt-0 xl:text-4xl">
+              Engineered From Scratch.
+            </h3>
+            <p className="text-center text-xs text-slate-50 sm:text-base xl:mt-1 xl:text-lg">
+              Specializing in
+              <span className="text-amber-200 ml-1">
+                MongoDB • Express • React • Node.js
+              </span>{' '}
+            </p>
+          </div>
           {/* ------ white fog effect -------- */}
           <div className="w-full h-[15%] bg-linear-to-t from-white via-slate-50/30 to-transparent absolute left-0 bottom-0 z-5"></div>
           <img
@@ -81,7 +96,7 @@ const Home = () => {
       </div>
 
       {/* =============== home section text =============  */}
-      <div className="pt-10">
+      <div className="pt-10 lg:pt-15">
         <p className="text-center text-sm text-[#d11110] font-bold tracking-[4px]">
           I BUILD MODERN
         </p>
@@ -155,7 +170,9 @@ const Home = () => {
             strokeLinejoin="round"
           />
         </svg>
-        <p className="text-center text-[10px] font-bold tracking-[5px] mt-2 text-gray-400">SCROLL DOWN</p>
+        <p className="text-center text-[10px] font-bold tracking-[5px] mt-2 text-gray-400">
+          SCROLL DOWN
+        </p>
       </div>
     </div>
   );
