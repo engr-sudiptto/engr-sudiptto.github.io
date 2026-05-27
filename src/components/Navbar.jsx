@@ -1,11 +1,32 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/mainLogo.png'
 
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+
+  // ====== webpage scroll tracking state ======
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  },[])
+
   return (
-    <div className="w-full max-w-300 m-auto px-3 py-2 fixed top-0 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between h-auto">
+    <div
+      className={`w-full max-w-300 m-auto px-3 py-2 fixed top-0 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between h-auto lg:py-0 lg:pl-5 lg:pr-0 ${isScrolled ? 'lg:bg-white/80 backdrop-blur-xl' : 'bg-transparent backdrop-blur-none'} transition-all duration-300`}
+    >
       {/* ========== My Logo ========== */}
       <Link className="flex gap-1 items-center sm:gap-1.5" to="/">
         <img
@@ -87,34 +108,42 @@ const Navbar = () => {
             <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-[#d11110] transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
           </Link>
           <Link
-            className="text-white font-bold xl:text-white xl:font-bold group lg:text-sm relative"
+            className={`text-white font-bold xl:font-bold group lg:text-sm relative ${isScrolled ? 'lg:text-[#d11110]' : 'lg:text-white'}`}
             to="skills/"
           >
             Skills
             {/* left to right hover animation */}
-            <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-white transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
+            <span
+              className={`absolute left-0 bottom-0 w-full h-0.5 bg-white transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left ${isScrolled ? 'lg:bg-[#d11110]' : 'bg-white'}`}
+            ></span>
           </Link>
           <Link
-            className="text-white font-bold xl:text-white xl:font-bold group lg:text-sm relative"
+            className={`text-white font-bold xl:font-bold group lg:text-sm relative ${isScrolled ? 'lg:text-[#d11110]' : 'lg:text-white'} `}
             to="/projects"
           >
             Projects
             {/* left to right hover animation */}
-            <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-white transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
+            <span
+              className={`absolute left-0 bottom-0 w-full h-0.5 bg-white transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left ${isScrolled ? 'lg:bg-[#d11110]' : 'bg-white'}`}
+            ></span>
           </Link>
           <Link
-            className="text-white font-bold xl:text-white lg:text-sm xl:font-bold group relative"
+            className={`text-white font-bold lg:text-sm xl:font-bold group relative ${isScrolled ? 'lg:text-[#d11110]' : 'lg:text-white'} `}
             to="/contact"
           >
             Contact
             {/* left to right hover animation */}
-            <span className=" absolute left-0 bottom-0 w-full h-0.5 bg-white transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left"></span>
+            <span
+              className={`absolute left-0 bottom-0 w-full h-0.5 bg-white transition-transform duration-300 ease-in-out scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left ${isScrolled ? 'lg:bg-[#d11110]' : 'bg-white'}`}
+            ></span>
           </Link>
           <Link
             to="/details"
-            className="w-30 h-10 lg:w-25 lg:h-8 border border-white rounded-sm flex items-center justify-center gap-1 xl:hover:bg-white group lg:text-sm"
+            className={`w-30 h-10 lg:w-25 lg:h-8 border border-white rounded-sm flex items-center justify-center gap-1 group lg:text-sm ${isScrolled ? 'lg:border-[#d11110] lg:hover:bg-[#d11110]' : 'lg:border-white lg:hover:bg-white'}`}
           >
-            <p className="text-white font-bold xl:font-bold xl:group-hover:text-[#d11110]">
+            <p
+              className={`text-white font-bold xl:font-bold ${isScrolled ? 'lg:text-[#d11110] xl:group-hover:text-white ' : 'lg:text-white xl:group-hover:text-[#d11110]'}`}
+            >
               Details
             </p>
             <svg
@@ -123,7 +152,7 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="size-6 text-white xl:group-hover:text-[#d11110]"
+              className={`size-6 text-white ${isScrolled ? 'lg:text-[#d11110] xl:group-hover:text-white' : 'lg:text-white xl:group-hover:text-[#d11110]'}`}
             >
               <path
                 strokeLinecap="round"
