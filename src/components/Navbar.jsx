@@ -21,7 +21,20 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  },[])
+  }, [])
+  
+  // ================= stop scroll when navbar menu is open ==============
+  useEffect(() => {
+    if (isNavbarOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    //------ cleanup function -----
+    return () => {
+      document.body.style.overflow = 'auto';
+    }
+  },[isNavbarOpen])
 
   return (
     <div
