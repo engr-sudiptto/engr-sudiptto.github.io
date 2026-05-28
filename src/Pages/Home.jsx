@@ -77,34 +77,59 @@ const Home = () => {
 
           {/* ============ right svg =========== */}
           {/* --- mobile right ----  */}
-          <div className="w-[55%] h-[95%] absolute z-2 top-0 right-0">
+          <div className="w-[55%] h-[80%] sm:w-[57%] sm:h-[83%] md:w-[58%] lg:hidden absolute z-2 top-0 right-0">
             <svg
               viewBox="0 0 500 300"
               preserveAspectRatio="none"
-              className="w-full h-full absolute -top-20 z-2 right-0 sm:w-[57%] sm:h-[85%] md:w-[58%] lg:hidden font-mono"
+              className="w-full h-full absolute -top-20 z-2 right-0 sm:w-full sm:h-full md:w-full font-mono"
             >
               <polygon points="220,0 500,0 500,300 0,300" fill="#d11110" />
             </svg>
-            <div className=" absolute -top-8 right-0 z-3 h-auto text-center pr-1 pb-10 font-serif">
-              <p className="text-2xl text-white">I Have the</p>
-              <p className="text-3xl text-amber-300 font-bold transform scale-y-170 origin-top -mt-3">
+            <div className=" absolute -top-8 right-0 z-3 h-auto text-center pr-1 pb-10 font-serif widermobile:pr-3 widermobile:-top-6 maxmobile:pr-1 lg:-top-2 xl:pr-8">
+              <p className="text-2xl transform scale-y-150 origin-top mb-3 text-white/40 maxmobile:text-[30px] ultrapromobile:text-[35px] sm:text-5xl bigscreentab:text-[55px] lg:text-[60px]">
+                I Have the
+              </p>
+              <p className="text-3xl text-amber-300/40 font-bold transform scale-y-190 origin-top -mt-3 maxmobile:text-4xl promobile:text-[40px] ultrapromobile:text-[45px] sm:text-6xl md:text-[70px] bigscreentab:text-[80px] lg:text-[90px] lg:-mt-4">
                 SKILLS
               </p>
-              <p className="text-xl text-white mt-4">to Build your</p>
-              <p className="text-2xl text-white ">Vision</p>
-              <p className="text-3xl font-bold text-white transform scale-y-170 origin-top -mt-3">
+              <p className="text-xl text-white/40 mt-5 maxmobile:text-[25px] ultrapromobile:mt-6 md:text-[30px] md:mt-8 bigscreentab:text-4xl bigscreentab:mt-10 lg:text-[45px] lg:mt-12 transform scale-y-130 origin-top">
+                to Build your
+              </p>
+              <p className="text-2xl text-white/40  maxmobile:text-[30px] ultrapromobile:text-[35px] md:text-5xl lg:text-[55px] transform scale-y-150 origin-top -mt-1 mb-3">
+                Vision
+              </p>
+              <p className="text-3xl font-bold text-white/40 transform scale-y-190 origin-top -mt-3 maxmobile:text-4xl promobile:text-[40px] ultrapromobile:text-[45px] sm:text-6xl md:text-[70px] bigscreentab:text-[80px] lg:text-[90px]">
                 ONLINE
               </p>
             </div>
           </div>
           {/* --- lg break ponit right ----  */}
-          <svg
-            viewBox="0 0 500 300"
-            preserveAspectRatio="none"
-            className="hidden lg:block absolute -top-20 z-2 right-0 lg:w-[55%] lg:h-[85%]"
-          >
-            <polygon points="170,0 500,0 500,300 0,300" fill="#d11110" />
-          </svg>
+          <div className="hidden lg:block lg:w-[55%] lg:h-[85%] absolute z-2 top-0 right-0">
+            <svg
+              viewBox="0 0 500 300"
+              preserveAspectRatio="none"
+              className="hidden lg:block absolute -top-20 z-2 right-0 lg:w-full lg:h-full"
+            >
+              <polygon points="170,0 500,0 500,300 0,300" fill="#d11110" />
+            </svg>
+            <div className=" absolute -top-8 right-0 z-3 h-auto text-center pr-1 pb-10 font-serif widermobile:pr-3 widermobile:-top-6 maxmobile:pr-1 lg:-top-2 xl:pr-8">
+              <p className="text-2xl text-white/40 maxmobile:text-[30px] ultrapromobile:text-[35px] sm:text-5xl bigscreentab:text-[55px] lg:text-[60px]">
+                I Have the
+              </p>
+              <p className="text-3xl text-amber-300/40 font-bold transform scale-y-170 origin-top -mt-3 maxmobile:text-4xl promobile:text-[40px] ultrapromobile:text-[45px] sm:text-6xl md:text-[70px] bigscreentab:text-[80px] lg:text-[90px] lg:-mt-4">
+                SKILLS
+              </p>
+              <p className="text-xl text-white/40 mt-4 maxmobile:text-[25px] ultrapromobile:mt-6 md:text-[30px] md:mt-8 bigscreentab:text-4xl bigscreentab:mt-10 lg:text-[45px] lg:mt-12">
+                to Build your
+              </p>
+              <p className="text-2xl text-white/40  maxmobile:text-[30px] ultrapromobile:text-[35px] md:text-5xl lg:text-[55px]">
+                Vision
+              </p>
+              <p className="text-3xl font-bold text-white/40 transform scale-y-170 origin-top -mt-3 maxmobile:text-4xl promobile:text-[40px] ultrapromobile:text-[45px] sm:text-6xl md:text-[70px] bigscreentab:text-[80px] lg:text-[90px]">
+                ONLINE
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 

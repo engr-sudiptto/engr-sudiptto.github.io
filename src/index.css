@@ -5,5 +5,12 @@
   --breakpoint-maxmobile: 450px;
   --breakpoint-promobile: 500px;
   --breakpoint-ultrapromobile: 560px;
-  --breakpoint-ultrapromobile: 560px;
+  --breakpoint-bigscreentab: 880px;
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-bigscreentab: 880px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
 }
