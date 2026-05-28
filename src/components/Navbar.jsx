@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full max-w-300 m-auto px-3 py-2 fixed top-0 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between h-auto lg:py-0 lg:pl-5 lg:pr-0 ${isScrolled ? 'lg:bg-white/80 backdrop-blur-xl' : 'bg-transparent backdrop-blur-none'} transition-all duration-300`}
+      className={`w-full max-w-300 m-auto px-3 py-2 fixed top-0 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between h-auto lg:py-0 lg:pl-5 lg:pr-0 ${isScrolled ? 'bg-white lg:bg-white/80 backdrop-blur-xl' : 'bg-transparent backdrop-blur-none'} transition-all duration-300`}
     >
       {/* ========== My Logo ========== */}
       <Link className="flex gap-1 items-center sm:gap-1.5" to="/">
@@ -52,7 +52,7 @@ const Navbar = () => {
             viewBox="0 0 24 24"
             strokeWidth="2"
             stroke="currentColor"
-            className="size-8 text-white cursor-pointer lg:hidden"
+            className={`size-8 ${isScrolled ? 'text-[#d11110]' : 'text-white'} cursor-pointer lg:hidden`}
           >
             <path
               strokeLinecap="round"
@@ -69,7 +69,7 @@ const Navbar = () => {
 
         {/* ======== mobile menu and desktop nemu ========  */}
         <ul
-          className={`w-60 h-screen flex flex-col gap-10 lg:gap-8.5 xl:gap-12 bg-linear-to-br from-[#d11110] to-[#8b0000] fixed top-0 ${isNavbarOpen ? 'right-0 opacity-100' : '-right-60 sm:-right-75 md:-right-85 opacity-0'} lg:opacity-100 p-10 sm:w-75 md:w-85 lg:bg-none lg:static lg:h-11 lg:flex-row lg:items-center lg:w-auto lg:right-0 transition-all duration-700 `}
+          className={`w-60 h-screen max-h-screen overflow-y-auto lg:overflow-hidden flex flex-col gap-10 lg:gap-8.5 xl:gap-12 bg-linear-to-br from-[#d11110] to-[#8b0000] fixed top-0 ${isNavbarOpen ? 'right-0 opacity-100' : '-right-60 sm:-right-75 md:-right-85 opacity-0'} lg:opacity-100 p-10 sm:w-75 md:w-85 lg:bg-none lg:static lg:h-11 lg:flex-row lg:items-center lg:w-auto lg:right-0 transition-all duration-700 `}
         >
           <div
             onClick={() => setIsNavbarOpen(false)}
