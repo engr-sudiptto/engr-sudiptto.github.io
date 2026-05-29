@@ -43,39 +43,69 @@ const Home = () => {
 
           {/* =========== left svg ============  */}
           {/* --- mobile left ----  */}
-          <svg
-            viewBox="0 0 500 300"
-            preserveAspectRatio="none"
-            className="w-[40%] h-[34%] absolute bottom-40 left-0 z-2 widermobile:bottom-45 maxmobile:bottom-50 promobile:bottom-54 ultrapromobile:bottom-60 sm:hidden"
-          >
-            <polygon points="0,0 460,0 350,300 0,300" fill="#e31e24" />
-          </svg>
-          {/* --- mini tab left ----  */}
-          <svg
-            viewBox="0 0 500 300"
-            preserveAspectRatio="none"
-            className="hidden sm:block absolute left-0 z-2 sm:bottom-50 sm:w-[41%] sm:h-[36%] md:hidden"
-          >
-            <polygon points="0,0 500,0 360,300 0,300" fill="#e31e24" />
-          </svg>
-          {/* --- bog tab left ----  */}
-          <svg
-            viewBox="0 0 500 300"
-            preserveAspectRatio="none"
-            className="hidden md:block absolute left-0 z-2 md:w-[41%] md:h-[37%] md:bottom-53 lg:hidden"
-          >
-            <polygon points="0,0 500,0 370,300 0,300" fill="#e31e24" />
-          </svg>
+          <div className="w-[40%] h-[34%] absolute bottom-40 left-0 z-2 widermobile:bottom-45 maxmobile:bottom-50 promobile:bottom-54 ultrapromobile:bottom-60 sm:hidden">
+            <svg
+              viewBox="0 0 500 300"
+              preserveAspectRatio="none"
+              className="w-full h-full absolute bottom-0 left-0 z-2 "
+            >
+              <polygon points="0,0 460,0 350,300 0,300" fill="#e31e24" />
+            </svg>
+            <div className="w-full h-full absolute top-0 z-3 left-0 font-serif pl-1">
+              <p className="text-white/40 w-[80%] transform scale-y-200 text-sm leading-none h-full content-center maxmobile:text-base promobile:text-[18px] ultrapromobile:text-[20px]">
+                AVAILABLE for REMOTE ROLES and FREELANCE PROJECTS
+              </p>
+            </div>
+          </div>
+          {/* --- mini/sm tab left ----  */}
+          <div className=" hidden sm:block absolute left-0 z-2 sm:bottom-50 sm:w-[41%] sm:h-[36%] md:hidden">
+            <svg
+              viewBox="0 0 500 300"
+              preserveAspectRatio="none"
+              className="w-full h-full absolute left-0 z-2 "
+            >
+              <polygon points="0,0 500,0 360,300 0,300" fill="#e31e24" />
+            </svg>
+            <div className="w-full h-full absolute top-0 z-3 left-0 font-serif pl-1">
+              <p className="text-white/40 w-[80%] transform scale-y-200 text-sm leading-none h-full content-center sm:text-xl sm:w-[80%] sm:pl-3 sm:tracking-widest">
+                AVAILABLE for REMOTE ROLES and FREELANCE PROJECTS
+              </p>
+            </div>
+          </div>
+          {/* --- big/md tab left ----  */}
+          <div className=" hidden md:block absolute left-0 z-2 md:w-[41%] md:h-[37%] md:bottom-53 lg:hidden">
+            <svg
+              viewBox="0 0 500 300"
+              preserveAspectRatio="none"
+              className=" absolute left-0 z-2 w-full h-full"
+            >
+              <polygon points="0,0 500,0 370,300 0,300" fill="#e31e24" />
+            </svg>
+            <div className="w-full h-full absolute top-0 z-3 left-0 font-serif pl-1">
+              <p className="text-white/40 w-[80%] transform scale-y-200 text-sm leading-none h-full content-center md:text-[23px] md:tracking-widest md:pl-3 bigscreentab:text-[26px] bigscreentab:pl-5">
+                AVAILABLE for REMOTE ROLES and FREELANCE PROJECTS
+              </p>
+            </div>
+          </div>
           {/* --- lg break ponit right ----  */}
-          <svg
-            viewBox="0 0 500 300"
-            preserveAspectRatio="none"
-            className="hidden lg:block absolute left-0 z-2 lg:w-[42%] lg:h-[43%] lg:bottom-55 xl:bottom-60"
-          >
-            <polygon points="0,0 500,0 390,300 0,300" fill="#e31e24" />
-          </svg>
+          <div className=" hidden lg:block  absolute left-0 z-2 lg:w-[42%] lg:h-[43%] lg:bottom-55 xl:bottom-60">
+            <svg
+              viewBox="0 0 500 300"
+              preserveAspectRatio="none"
+              className="absolute left-0 z-2 "
+            >
+              <polygon points="0,0 500,0 390,300 0,300" fill="#e31e24" />
+            </svg>
+            <div className="w-full h-full absolute top-0 z-3 left-0 font-serif pl-1">
+              <p className="text-white/40 w-[80%] transform scale-y-200 text-sm leading-none h-full content-center lg:text-[32px] lg:w-[85%] lg:pl-5 lg:tracking-widest lg:font-black xl:w-[80%] xl:text-[37px] xl:mt-1">
+                AVAILABLE for REMOTE ROLES and FREELANCE PROJECTS
+              </p>
+            </div>
+          </div>
 
-          {/* ============ right svg =========== */}
+          {/* =========================
+              ====== right svg ========
+              ========================= */}
           {/* --- mobile right ----  */}
           <div className="w-[55%] h-[80%] sm:w-[57%] sm:h-[83%] md:w-[58%] lg:hidden absolute z-2 top-0 right-0">
             <svg
@@ -212,6 +242,7 @@ const Home = () => {
           SCROLL DOWN
         </p>
       </div>
+      
     </div>
   );
 };
