@@ -15,7 +15,7 @@ const Home = () => {
         <div className="w-full relative mt-20 h-full">
           {/* ----------- main hero text -------------  */}
           <div className="w-full absolute left-0 bottom-6 z-4 sm:bottom-10">
-            <h2 className="text-center text-amber-400/90 font-black tracking-widest text-[45px] widermobile:text-[50px] italic sm:text-7xl xl:text-8xl  [text-shadow:1px_1px_0px_#d97706,2px_2px_0px_#d97706,3px_3px_0px_#d97706,4px_4px_0px_#d97706,5px_5px_0px_#d97706,6px_6px_12px_rgba(0,0,0,0.85)]">
+            <h2 className="text-center font-black tracking-widest text-[45px] widermobile:text-[50px] italic sm:text-7xl xl:text-8xl text-[#FFD700] [text-shadow:1px_1px_0px_#C99700,2px_2px_0px_#C99700,3px_3px_0px_#C99700,4px_4px_0px_#C99700,5px_5px_0px_#C99700,10px_10px_30px_rgb(0,0,0)]">
               FULL STACK
             </h2>
             <h3 className="text-center text-slate-50 text-xl font-bold -mt-2 tracking-wide sm:text-3xl sm:mt-0 xl:text-4xl">
