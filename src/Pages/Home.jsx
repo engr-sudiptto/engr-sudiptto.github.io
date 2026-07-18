@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import heroImage from '../assets/mainHero.png';
 import heroSectionBG from '../assets/heroBg.jpg';
 import { Link } from 'react-router-dom';
+import AboutComponent from '../components/AboutComponent';
 
 const Home = () => {
   return (
@@ -242,6 +243,9 @@ const Home = () => {
           SCROLL DOWN
         </p>
       </div>
+
+      {/* ============== About Component =======  */}
+      <AboutComponent/>
     </div>
   );
 };
