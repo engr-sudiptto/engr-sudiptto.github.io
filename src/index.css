@@ -13,3 +13,44 @@
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
 }
+
+/* ------ Custom scrollbar hiding & smooth animation support ------- */
+@layer utilities {
+  /* ----- Scrollbar Hide ------ */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+/* -------  Custom Keyframe Animation for Infinite Scroll ------ */
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-infinite-scroll {
+  display: flex;
+  width: max-content;
+  animation: infinite-scroll 40s linear infinite;
+}
+
+/* ------- paused only when hover on any child --------  */
+.animate-infinite-scroll:has(.skill-icon-item:hover) {
+  animation-play-state: paused;
+}
+
+/* ----- smooth hover when transition ----------- */
+.skill-icon-item {
+  transition: transform 0.1s;
+}
+.skill-icon-item:hover {
+  transform: scale(1.2); 
+}
